@@ -33,7 +33,7 @@ export const SzallasSingle = () => {
         <div>
         <h2>Egy szállás adatai</h2>
         {error && <p style={{ color: 'red'}}> {error} </p>}
-        {data ? (
+        {data!=[] ? (
           <ul> 
          
           <li key={data.id}>{data.name} - {data.hostname} - {data.location} - {data.price} - {data.minimum_nights}

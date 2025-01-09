@@ -4,6 +4,7 @@ import { Login } from './Login';
 import { Logout } from './Logout';
 import { SzallasList } from './SzallasList';
 import { SzallasSingle } from './SzallasSingle';
+import {SzallasMod} from './SzallasMod';
 
 import './App.css';
 
@@ -44,6 +45,7 @@ export const App = () => {
         <Route path = "/Logout" element={<Logout />} />
         <Route path = "/SzallasList" element={<SzallasList />} />
         <Route path = "/data/:id" element={<SzallasSingle />} />
+        <Route path = "/data-mod/:id" element={<SzallasMod />} />
         <Route path = "*" element={<Login />} />
       </Routes>
     </Router>
