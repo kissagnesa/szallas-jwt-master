@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, NavLink} from 'react-router-dom
 import { Login } from './Login';
 import { Logout } from './Logout';
 import { SzallasList } from './SzallasList';
+import { SzallasSingle } from './SzallasSingle';
+
 import './App.css';
 
 export const App = () => {
@@ -41,6 +43,8 @@ export const App = () => {
         <Route path = "/" element={<Login />} />
         <Route path = "/Logout" element={<Logout />} />
         <Route path = "/SzallasList" element={<SzallasList />} />
+        <Route path = "/data/:id" element={<SzallasSingle />} />
+        <Route path = "*" element={<Login />} />
       </Routes>
     </Router>
   );
