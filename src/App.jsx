@@ -5,6 +5,8 @@ import { Logout } from './Logout';
 import { SzallasList } from './SzallasList';
 import { SzallasSingle } from './SzallasSingle';
 import {SzallasMod} from './SzallasMod';
+import {SzallasDel} from './SzallasDel';
+import {SzallasCreate} from './SzallasCreate';
 
 import './App.css';
 
@@ -33,6 +35,9 @@ export const App = () => {
                       <span className="nav-link">Szállás Lista</span></NavLink>
                   </li>
                   <li className="nav-item">
+              <NavLink className="nav-link" to="/data-create/:id">Új szállás hozzáadása</NavLink>
+                  </li>
+                  <li className="nav-item">
                     <NavLink to={"/logout"} className={({isActive}) => "nav-link" + (isActive ? "active" : "")}>
                       <span className="nav-link">Kijelentkezés</span></NavLink>
                   </li>
@@ -46,6 +51,8 @@ export const App = () => {
         <Route path = "/SzallasList" element={<SzallasList />} />
         <Route path = "/data/:id" element={<SzallasSingle />} />
         <Route path = "/data-mod/:id" element={<SzallasMod />} />
+        <Route path = "/data-del/:id" element={<SzallasDel />} />
+        <Route path= "/data-create/:id" element={<SzallasCreate/>}/>
         <Route path = "*" element={<Login />} />
       </Routes>
     </Router>
