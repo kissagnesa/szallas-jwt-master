@@ -35,7 +35,7 @@ export const App = () => {
                       <span className="nav-link">Szállás Lista</span></NavLink>
                   </li>
                   <li className="nav-item">
-              <NavLink className="nav-link" to="/data-create/:id">Új szállás hozzáadása</NavLink>
+              <NavLink className="nav-link" to="/data-create">Új szállás hozzáadása</NavLink>
                   </li>
                   <li className="nav-item">
                     <NavLink to={"/logout"} className={({isActive}) => "nav-link" + (isActive ? "active" : "")}>
@@ -52,7 +52,7 @@ export const App = () => {
         <Route path = "/data/:id" element={<SzallasSingle />} />
         <Route path = "/data-mod/:id" element={<SzallasMod />} />
         <Route path = "/data-del/:id" element={<SzallasDel />} />
-        <Route path= "/data-create/:id" element={<SzallasCreate/>}/>
+        <Route path= "/data-create" element={<SzallasCreate/>}/>
         <Route path = "*" element={<Login />} />
       </Routes>
     </Router>
